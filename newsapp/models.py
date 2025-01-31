@@ -4,7 +4,9 @@ from django.db import models
 class NewsPost(models.Model):
     CATEGORY = (('seizi', '政治'),
                 ('sports', 'スポーツ'),
-                ('tenki', '天気'))
+                ('tenki', '天気'),
+                ('nitizyo','日常'),
+                )
 
     title = models.CharField(
         verbose_name='タイトル',

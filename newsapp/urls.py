@@ -10,6 +10,7 @@ urlpatterns = [
     path('seizi/', views.SeiziView.as_view(), name='seizi'),
     path('sports/', views.SportsView.as_view(), name='sports'),
     path('tenki/', views.TenkiView.as_view(), name='tenki'),
+    path('nitizyo/',views.NitizyoView.as_view(),name='nitizyo'),
 
     # 記事投稿・削除機能の追加
     path('post/create/', views.post_create, name='post_create'),

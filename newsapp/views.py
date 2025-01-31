@@ -46,10 +46,14 @@ class TenkiView(ListView):
         category='tenki').order_by('-posted_at')
     paginate_by = 2
 
-class SignUpView(generic.CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy('newsapp:login')
-    template_name = 'signup.html'
+class NitizyoView(ListView):
+    template_name='nitizyo.html'
+    model = NewsPost
+    context_object_name = 'nitizyo_records'
+    queryset = NewsPost.objects.filter(
+        category='nitizyo').order_by('-posted_at')
+    paginate_by = 2
+
 
 
 # トップページに投稿一覧を表示
